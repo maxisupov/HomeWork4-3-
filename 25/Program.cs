@@ -6,10 +6,14 @@ int A = int.Parse(Console.ReadLine());
 Console.WriteLine("Введите степень числа: ");
 int B = int.Parse(Console.ReadLine());
 
-int num = A;
+Console.WriteLine($"После возведения числа {A} в степень {B} - получилось {GetMult(A)}.");
 
-for (int i = 1; i < B; i++)
-{
-num = num * A;
+int GetMult(int limit)
+{int num = A;
+
+    for (int i = 1; i < B; i++)
+    {
+        num = num * A;
+    }
+    return num;
 }
-Console.WriteLine($"После возведения числа {A} в степень {B} - получилось {num}.");
